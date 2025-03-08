@@ -40,7 +40,7 @@
   :type 'boolean
   :group 'lsp-tailwindcss)
 
-(defcustom lsp-tailwindcss-server-version "0.12.6"
+(defcustom lsp-tailwindcss-server-version "0.14.8"
   "Specify the version of tailwindcss intellisence."
   :type 'string
   :group 'lsp-tailwindcss)
@@ -52,7 +52,7 @@ Leave empty to use the managed installation."
   :type 'string
   :group 'lsp-tailwindcss)
 
-(defcustom lsp-tailwindcss-major-modes '(rjsx-mode web-mode html-mode css-mode typescript-mode typescript-tsx-mode tsx-ts-mode)
+(defcustom lsp-tailwindcss-major-modes '(rjsx-mode web-mode html-mode css-mode typescript-mode typescript-tsx-mode tsx-ts-mode astro-ts-mode)
   "Major modes that lsp-tailwindcss should activate."
   :type 'list
   :group 'lsp-tailwindcss
@@ -176,40 +176,40 @@ Rules can be configured individually using the lsp-tailwindcss-lint-* settings:
 (defcustom lsp-tailwindcss-lint-invalid-screen "error"
   "Unknown screen name used with the @screen directive."
   :type '(choice (const "ignore")
-          (const "warning")
-          (const "error"))
+                 (const "warning")
+                 (const "error"))
   :group 'lsp-tailwindcss
   :package-version '(lsp-tailwindcss . "0.2"))
 
 (defcustom lsp-tailwindcss-lint-invalid-variant "error"
   "Unknown variant name used with the @variants directive."
   :type '(choice (const "ignore")
-          (const "warning")
-          (const "error"))
+                 (const "warning")
+                 (const "error"))
   :group 'lsp-tailwindcss
   :package-version '(lsp-tailwindcss . "0.2"))
 
 (defcustom lsp-tailwindcss-lint-invalid-tailwind-directive "error"
   "Unknown value used with the @tailwind directive."
   :type '(choice (const "ignore")
-          (const "warning")
-          (const "error"))
+                 (const "warning")
+                 (const "error"))
   :group 'lsp-tailwindcss
   :package-version '(lsp-tailwindcss . "0.2"))
 
 (defcustom lsp-tailwindcss-lint-invalid-apply "error"
   "Unsupported use of the @apply directive."
   :type '(choice (const "ignore")
-          (const "warning")
-          (const "error"))
+                 (const "warning")
+                 (const "error"))
   :group 'lsp-tailwindcss
   :package-version '(lsp-tailwindcss . "0.2"))
 
 (defcustom lsp-tailwindcss-lint-invalid-config-path "error"
   "Unknown or invalid path used with the theme helper."
   :type '(choice (const "ignore")
-          (const "warning")
-          (const "error"))
+                 (const "warning")
+                 (const "error"))
   :group 'lsp-tailwindcss
   :package-version '(lsp-tailwindcss . "0.2"))
 
@@ -217,16 +217,16 @@ Rules can be configured individually using the lsp-tailwindcss-lint-* settings:
   "Class names on the same HTML element.
 Which apply the same CSS property or properties."
   :type '(choice (const "ignore")
-          (const "warning")
-          (const "error"))
+                 (const "warning")
+                 (const "error"))
   :group 'lsp-tailwindcss
   :package-version '(lsp-tailwindcss . "0.2"))
 
 (defcustom lsp-tailwindcss-lint-recommended-variant-order "warning"
   "Class variants not in the recommended order (applies in JIT mode only)."
   :type '(choice (const "ignore")
-          (const "warning")
-          (const "error"))
+                 (const "warning")
+                 (const "error"))
   :group 'lsp-tailwindcss
   :package-version '(lsp-tailwindcss . "0.2"))
 
